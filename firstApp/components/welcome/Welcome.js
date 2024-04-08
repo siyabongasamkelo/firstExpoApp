@@ -5,7 +5,7 @@ import { Button, ButtonText } from "../common/Buttons";
 
 const Welcome = ({ navigation }) => {
   const handleButtonPress = () => {
-    navigation.navigate("Home");
+    navigation.navigate("Bottom Navigator");
   };
 
   return (
