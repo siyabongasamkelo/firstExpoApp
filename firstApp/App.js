@@ -16,8 +16,8 @@ export default function App() {
           options={{ headerShown: false }}
         />
         <Stack.Screen
-          name="Home"
-          component={Home}
+          name="Bottom Navigator"
+          component={BottomNavigation}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>
