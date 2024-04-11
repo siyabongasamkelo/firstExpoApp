@@ -1,26 +1,45 @@
-import Carousel from "react-native-snap-carousel";
-import { CarouselContainer, CarouselItem, ItemText } from "./Carousel.styled";
+import React from "react";
+// import { FlatList } from "react-native";
+import {
+  CarouselContainer,
+  CarouselItem,
+  CarouselTxtDiv,
+  FlatList,
+  ItemText,
+  MyFlatList,
+  RoundedImageWrapper,
+} from "./Carousel.styled";
+// import item from "../../assets/img/item.jpg";
 
 const data = [
-  { id: 1, text: "Item 1" },
-  { id: 2, text: "Item 2" },
-  { id: 3, text: "Item 3" },
+  { id: 1, text: "Mkhanyakude Dulux" },
+  { id: 2, text: "Octa nano 5" },
+  { id: 3, text: "Golden Milano" },
 ];
 
 const ItemCarousel = () => {
   const renderItem = ({ item }) => (
-    <CarouselItem>
-      <ItemText>{item.text}</ItemText>
-    </CarouselItem>
+    <RoundedImageWrapper>
+      <CarouselItem
+        source={require("../../assets/img/item.jpg")}
+        resizeMode="cover"
+      >
+        <CarouselTxtDiv>
+          <ItemText>{item.text}</ItemText>
+        </CarouselTxtDiv>
+      </CarouselItem>
+    </RoundedImageWrapper>
   );
 
   return (
     <CarouselContainer>
-      <Carousel
+      <MyFlatList
         data={data}
         renderItem={renderItem}
-        sliderWidth={200}
-        itemWidth={200}
+        keyExtractor={(item, index) => item.id.toString()} // Ensure to include the index argument
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        pagingEnabled
       />
     </CarouselContainer>
   );
