@@ -40,6 +40,22 @@ const BottomNavigation = () => {
       />
 
       <Tab.Screen
+        name="Cart"
+        component={Home}
+        options={{
+          tabBarIcon: ({ focused }) => {
+            return (
+              <Ionicons
+                name={focused ? "bag" : "bag-outline"}
+                size={24}
+                color={focused ? "black" : "gray"}
+              />
+            );
+          },
+        }}
+      />
+
+      <Tab.Screen
         name="Search"
         component={Home}
         options={{
