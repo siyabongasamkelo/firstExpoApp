@@ -12,7 +12,7 @@ export const MediumHeader = styled(Text)`
   font-size: 22px;
   font-weight: 600;
   color: rgba(0, 0, 0, 0.8);
-  margin-top: 5%;
+  /* margin-top: 5%; */
 `;
 
 export const P = styled(Text)`
