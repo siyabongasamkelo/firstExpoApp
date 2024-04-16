@@ -9,7 +9,8 @@ export const RoundedImageWrapper = styled(View)`
   border-radius: 20px;
   overflow: hidden;
   width: 170px;
-  height: 280px;
+  /* height: 280px; */
+  height: 200px;
   margin: 10px;
   background-color: red;
 `;
