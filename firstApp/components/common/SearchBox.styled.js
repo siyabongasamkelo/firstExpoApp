@@ -13,11 +13,11 @@ export const SearchBoxWrapper = styled(View)`
   align-items: center;
   justify-content: space-between;
 
-  /* shadow-color: #000;
+  shadow-color: #000;
   shadow-offset: 0px 2px;
   shadow-opacity: 0.3;
   shadow-radius: 3px;
-  elevation: 5; */
+  elevation: 5;
 `;
 
 export const Input = styled.TextInput`
@@ -39,8 +39,14 @@ export const SearchFilter = styled(View)`
   aspect-ratio: 1 / 1;
   background-color: #898121;
   border-radius: 100px;
-  margin-right: 5%;
+  margin-right: 2%;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  shadow-color: #000;
+  shadow-offset: 0px 2px;
+  shadow-opacity: 0.3;
+  shadow-radius: 3px;
+  elevation: 5;
 `;
