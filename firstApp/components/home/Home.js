@@ -1,5 +1,6 @@
 import {
   AllItems,
+  HomeHeader,
   ItemCartegories,
   ScrollableView,
   SmallBtnText,
@@ -9,9 +10,9 @@ import {
 import { MediumHeader, P } from "../common/Text";
 import SearchBox from "../common/SearchBox";
 import { SafeAreaView } from "react-native";
-import ItemCarousel from "../common/Carousel";
 import { useState } from "react";
 import ItemCard from "../common/ItemCard";
+import { Ionicons } from "@expo/vector-icons";
 
 const Home = () => {
   const [btnOneClick, setBtnOneClick] = useState(true);
@@ -39,8 +40,17 @@ const Home = () => {
     <ScrollableView>
       <SafeAreaView>
         <Wrapper>
-          <MediumHeader>All Watches</MediumHeader>
-          <P>The best watches ever...</P>
+          <HomeHeader>
+            <Ionicons name="menu-outline" size={24} color="rgba(0,0,0,0.7)" />
+
+            <Ionicons
+              name="notifications-outline"
+              size={24}
+              color="rgba(0,0,0,0.7)"
+            />
+          </HomeHeader>
+          <MediumHeader>Luxurious Watches</MediumHeader>
+          {/* <P>The best watches ever...</P> */}
           <SearchBox />
           <ItemCartegories>
             <SmallButton
@@ -53,18 +63,19 @@ const Home = () => {
               clicked={btnTwoClick}
               onPress={() => btnClickHandler(2)}
             >
-              <SmallBtnText clicked={btnTwoClick}>Popular</SmallBtnText>
+              <SmallBtnText clicked={btnTwoClick}>Classic</SmallBtnText>
             </SmallButton>
             <SmallButton
               clicked={btnThreeClick}
               onPress={() => btnClickHandler(3)}
             >
-              <SmallBtnText clicked={btnThreeClick}>Recent</SmallBtnText>
+              <SmallBtnText clicked={btnThreeClick}>Advanced</SmallBtnText>
             </SmallButton>
           </ItemCartegories>
-          <ItemCarousel />
 
           <AllItems>
+            <ItemCard></ItemCard>
+            <ItemCard></ItemCard>
             <ItemCard></ItemCard>
             <ItemCard></ItemCard>
           </AllItems>
