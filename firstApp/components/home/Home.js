@@ -7,7 +7,7 @@ import {
   SmallButton,
   Wrapper,
 } from "./Home.styled";
-import { MediumHeader, P } from "../common/Text";
+import { MediumHeader } from "../common/Text";
 import SearchBox from "../common/SearchBox";
 import { SafeAreaView } from "react-native";
 import { useState } from "react";
@@ -50,7 +50,6 @@ const Home = () => {
             />
           </HomeHeader>
           <MediumHeader>Luxurious Watches</MediumHeader>
-          {/* <P>The best watches ever...</P> */}
           <SearchBox />
           <ItemCartegories>
             <SmallButton
