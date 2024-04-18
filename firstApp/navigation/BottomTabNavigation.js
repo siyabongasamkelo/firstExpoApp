@@ -2,6 +2,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
 import Home from "../components/home/Home";
 import Cart from "../components/cart/Cart";
+import UserProfile from "../components/userProfile/UserProfile";
 // import { View, TouchableOpacity, Text } from "react-native";
 
 const Tab = createBottomTabNavigator();
@@ -76,7 +77,7 @@ const BottomNavigation = () => {
 
       <Tab.Screen
         name="Profile"
-        component={Home}
+        component={UserProfile}
         options={{
           tabBarIcon: ({ focused }) => {
             return (
