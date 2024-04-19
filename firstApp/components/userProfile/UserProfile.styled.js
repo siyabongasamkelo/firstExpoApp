@@ -72,7 +72,7 @@ export const UserSettings = styled.View``;
 
 export const Setting = styled.View`
   width: 100%;
-  height: 60px;
+  height: 50px;
   margin-top: 3%;
   display: flex;
   justify-content: space-between;
@@ -81,8 +81,8 @@ export const Setting = styled.View`
 `;
 
 export const NameAndIcon = styled.View`
-  width: 45%;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
+  align-items: center;
 `;
