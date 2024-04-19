@@ -3,6 +3,7 @@ import { Ionicons } from "@expo/vector-icons";
 import Home from "../components/home/Home";
 import Cart from "../components/cart/Cart";
 import UserProfile from "../components/userProfile/UserProfile";
+import Search from "../components/search/Search";
 // import { View, TouchableOpacity, Text } from "react-native";
 
 const Tab = createBottomTabNavigator();
@@ -61,7 +62,7 @@ const BottomNavigation = () => {
 
       <Tab.Screen
         name="Search"
-        component={Home}
+        component={Search}
         options={{
           tabBarIcon: ({ focused }) => {
             return (
