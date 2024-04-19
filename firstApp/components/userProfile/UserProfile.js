@@ -17,7 +17,7 @@ import {
 import { useNavigation } from "@react-navigation/native";
 import { Ionicons } from "@expo/vector-icons";
 import React, { useState } from "react";
-import { View, Text, TouchableOpacity } from "react-native";
+import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 import { P } from "../common/Text";
 
 const UserProfile = () => {
@@ -32,6 +32,12 @@ const UserProfile = () => {
   const toggleAccordion = () => {
     setIsExpanded(!isExpanded);
   };
+
+  const styles = StyleSheet.create({
+    icon: {
+      marginRight: 10,
+    },
+  });
 
   return (
     <UserProfileWrapper>
@@ -64,27 +70,16 @@ const UserProfile = () => {
         <SmallText>Siyabonga@gmail.com</SmallText>
       </UserDetails>
       <UserSettings>
-        {/* <View>
-
-          <TouchableOpacity onPress={toggleAccordion}>
-            <SmallText style={{ fontSize: 18, fontWeight: "bold" }}>
-              Click to toggle
-            </SmallText>
-          </TouchableOpacity>
-          {isExpanded && (
-            <View
-              style={{ padding: 10, backgroundColor: "#f0f0f0", marginTop: 10 }}
-            >
-              <SmallText>This is the content of the accordion</SmallText>
-            </View>
-          )}
-        </View> */}
-
         <Setting>
           <NameAndIcon>
-            <Ionicons name="person" size={24} color="rgba(0,0,0,0.8)" />
+            <Ionicons
+              name="person"
+              size={24}
+              color="rgba(0,0,0,0.8)"
+              style={styles.icon}
+            />
 
-            <P>Basic Information</P>
+            <P>My Profile</P>
           </NameAndIcon>
           <Ionicons
             name="chevron-forward-outline"
@@ -92,11 +87,78 @@ const UserProfile = () => {
             color="rgba(0,0,0,0.8)"
           />
         </Setting>
-        <View
-          style={{ padding: 10, backgroundColor: "#f0f0f0", marginTop: 10 }}
-        >
-          <SmallText>This is the content of the accordion</SmallText>
-        </View>
+
+        <Setting>
+          <NameAndIcon>
+            <Ionicons
+              name="cube"
+              size={24}
+              color="rgba(0,0,0,0.8)"
+              style={styles.icon}
+            />
+
+            <P>My Orders</P>
+          </NameAndIcon>
+          <Ionicons
+            name="chevron-forward-outline"
+            size={24}
+            color="rgba(0,0,0,0.8)"
+          />
+        </Setting>
+
+        <Setting>
+          <NameAndIcon>
+            <Ionicons
+              name="cash"
+              size={24}
+              color="rgba(0,0,0,0.8)"
+              style={styles.icon}
+            />
+
+            <P>Refund</P>
+          </NameAndIcon>
+          <Ionicons
+            name="chevron-forward-outline"
+            size={24}
+            color="rgba(0,0,0,0.8)"
+          />
+        </Setting>
+
+        <Setting>
+          <NameAndIcon>
+            <Ionicons
+              name="lock-closed-outline"
+              size={24}
+              color="rgba(0,0,0,0.8)"
+              style={styles.icon}
+            />
+
+            <P>Change Password</P>
+          </NameAndIcon>
+          <Ionicons
+            name="chevron-forward-outline"
+            size={24}
+            color="rgba(0,0,0,0.8)"
+          />
+        </Setting>
+
+        <Setting>
+          <NameAndIcon>
+            <Ionicons
+              name="language-outline"
+              size={24}
+              color="rgba(0,0,0,0.8)"
+              style={styles.icon}
+            />
+
+            <P>My Profile</P>
+          </NameAndIcon>
+          <Ionicons
+            name="chevron-forward-outline"
+            size={24}
+            color="rgba(0,0,0,0.8)"
+          />
+        </Setting>
       </UserSettings>
     </UserProfileWrapper>
   );
